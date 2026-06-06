@@ -1,0 +1,76 @@
+==================== 2026-06-06T11:42:29.350097Z | 019e9cbd-dde3-79b3-a51b-bc6fe87923ef ====================
+==================== 2026-06-06T11:47:02.424545Z | 019e9cc2-0896-7f71-bc60-3122c9b89e63 ====================
+11:47:02.424805 [info ]: Installing dbt project and profile setup
+11:47:02.447344 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+11:47:02.447950 [info ]: Success Project created successfully!
+11:47:02.448198 [info ]: Info Project name: jaffle_shop
+11:47:02.448350 [info ]: Info Project directory: jaffle_shop
+11:47:02.448490 [info ]: Info Setting up your profile...
+11:47:02.448820 [info ]: Info Creating new profile...
+11:47:07.099004 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+11:49:32.714791 [info ]: Success Profile written to C:\Users\shiva\.dbt\profiles.yml
+11:49:32.715146 [info ]: Validating profile inputs, adapters, and connection
+
+11:49:32.715365 [info ]: dbt-fusion 2.0.0-preview.186
+11:49:32.716111 [info ]: Started loading project
+11:49:32.719560 [info ]: Loading ~/.dbt/profiles.yml
+11:49:32.756013 [info ]: Finished loading project [  0.04s]
+11:49:32.756557 [info ]: Started debugging
+11:49:32.756780 [info ]: Debugging profile: dev
+11:49:32.757102 [info ]: Debugging dbt version: 2.0.0-preview.186
+11:49:32.757412 [info ]: Debugging platform: windows x86_64 (windows)
+11:49:32.757697 [info ]: Debugging adapter type: databricks (remote)
+11:49:32.809200 [info ]: Debugging dependencies:
+  git: OK
+11:49:32.809678 [info ]: Debugging connection:
+  "schema": "analytics",
+  "host": "https://dbc-7389583e-565d.cloud.databricks.com/",
+  "http_path": "/sql/1.0/warehouses/3baf3fff16b21423"
+11:49:34.669844 [info ]: Finished debugging [  1.91s]
+11:49:34.670085 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the specified database.
+The following error was returned:
+
+failed to ping database: databricks: request error: error connecting: host=dbc-7389583e-565d.cloud.databricks.com/ port=443, httpPath=/sql/1.0/warehouses/3baf3fff16b21423: databricks: request error: open session request error: Post "https://dbc-7389583e-565d.cloud.databricks.com/:443/sql/1.0/warehouses/3baf3fff16b21423": request error after 1 attempt(s): Post "https://dbc-7389583e-565d.cloud.databricks.com/:443/sql/1.0/warehouses/3baf3fff16b21423": net/http: invalid header field value for "Authorization"
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+11:49:35.850680 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [2m 33s]
+==================== 2026-06-06T11:51:36.009044Z | 019e9cc6-3547-7d03-a8ee-f8bf08c1cb27 ====================
+11:51:36.009254 [info ]: Installing dbt project and profile setup
+11:51:36.011589 [info ]: Warning Directory 'jaffle_shop' already exists, using 'jaffle_shop_1' instead
+11:51:36.050436 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+11:51:36.050731 [info ]: Success Project created successfully!
+11:51:36.050872 [info ]: Info Project name: jaffle_shop_1
+11:51:36.051045 [info ]: Info Project directory: jaffle_shop_1
+11:51:36.051165 [info ]: Info Setting up your profile...
+11:51:36.051687 [info ]: Loading ~/.dbt/profiles.yml
+11:51:36.063245 [info ]: Info Creating new profile...
+11:51:40.794296 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+11:52:13.605631 [info ]: Success Profile written to C:\Users\shiva\.dbt\profiles.yml
+11:52:13.605922 [info ]: Validating profile inputs, adapters, and connection
+
+11:52:13.606180 [info ]: dbt-fusion 2.0.0-preview.186
+11:52:13.606756 [info ]: Started loading project
+11:52:13.608800 [info ]: Loading ~/.dbt/profiles.yml
+11:52:13.630762 [info ]: Finished loading project [  0.02s]
+11:52:13.631017 [info ]: Started debugging
+11:52:13.631173 [info ]: Debugging profile: dev
+11:52:13.631412 [info ]: Debugging dbt version: 2.0.0-preview.186
+11:52:13.631670 [info ]: Debugging platform: windows x86_64 (windows)
+11:52:13.631852 [info ]: Debugging adapter type: databricks (remote)
+11:52:13.681596 [info ]: Debugging dependencies:
+  git: OK
+11:52:13.681917 [info ]: Debugging connection:
+  "schema": "analytics",
+  "host": "https://dbc-7389583e-565d.cloud.databricks.com",
+  "http_path": "/sql/1.0/warehouses/3baf3fff16b21423"
+11:52:35.465238 [debug]: Query executed on node unknown:
+select 1 as id
+11:52:35.465466 [info ]: Debugging connection test: OK
+11:52:35.465886 [info ]: Debugged All checks passed!
+11:52:35.466214 [info ]: Finished debugging [ 21.84s]
+11:52:36.386892 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' successfully for target 'dev' [1m]
