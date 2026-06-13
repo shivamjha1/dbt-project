@@ -1,5 +1,6 @@
 models:
   - name: stg_customers
+    description: "Staging model for customers data from the shop source."
     columns: 
       - name: customer_id
         data_tests:
@@ -7,8 +8,10 @@ models:
           - unique 
 
   - name: stg_orders
+    description: "{{ doc('order_status')}}"
     columns: 
       - name: order_id
+        description: primary key
         data_tests:
           - not_null
           - unique 
@@ -18,6 +21,7 @@ models:
               arguments:
                 values: ['placed', 'shipped', 'completed', 'returned', 'return_pending']
       - name: customer_id
+        description: foreign key to customers
         data_tests:
           - relationships:
               arguments:

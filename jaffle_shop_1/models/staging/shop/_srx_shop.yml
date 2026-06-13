@@ -1,9 +1,11 @@
 sources:
   - name: shop
+    description: "Source configuration for the shop data, including customers and orders tables."
     database: raw
     schema: shop
     tables:
       - name: customers
+        description: "Source table for customers data from the shop."
         columns:
           - name: id
             description: primary key
@@ -11,6 +13,7 @@ sources:
               - not_null
               - unique
       - name: orders
+        description: "Source table for orders data from the shop."
         config:
           freshness:
             warn_after: 
